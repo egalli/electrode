@@ -17,11 +17,11 @@ function storeInitializer(req, storage) {
     };
   } else if (req.path === "/ssrcachingtemplatetype") {
     initialState = {
-      count: 100
+      count: req.query.count || 100
     };
   } else if (req.path === "/ssrcachingsimpletype") {
     initialState = {
-      count: 100
+      count: req.query.count || 100
     };
   } else if (req.path === "/above-the-fold") {
     initialState = {

@@ -4,7 +4,7 @@ process.on("SIGINT", () => {
   process.exit(0);
 });
 
-const SSRCaching = require("electrode-react-ssr-caching");
+// const SSRCaching = require("electrode-react-ssr-caching");
 const support = require("electrode-archetype-react-app/support");
 const electrodeConfippet = require("electrode-confippet");
 const electrodeServer = require("electrode-server");
@@ -30,7 +30,7 @@ require.extensions[".css"] = () => {
 support.load({
   cssModuleHook: true
 }).then(() => {
-  SSRCaching.enableCaching();
-  SSRCaching.setCachingConfig(cacheConfig);
+  // SSRCaching.enableCaching();
+  // SSRCaching.setCachingConfig(cacheConfig);
   return electrodeServer(electrodeConfippet.config, [staticPathsDecor()]);
 });
